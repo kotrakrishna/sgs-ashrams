@@ -1,4 +1,4 @@
-google-location-plotter
-=======================
+SGS Ashrams / Centers around the world
+======================================
 
-Plots a list of locations provided as JSON on a google map.
+Plots the various ashrams/temples/centers of Avadhooth Dattapeetham on a google map.
