@@ -26,8 +26,9 @@ $ashrams = [
         "name" => 'Kalagni Samana Dattatreya',
         "geometry" => [
             "location" => [
-                "lat" => 12.369162,
-                "lng" => 79.783092
+
+                "lat" => 12.283467,
+                "lng" => 76.659047
             ]
         ],
         "zIndex" => 1,
@@ -62,8 +63,8 @@ EOD
         "name" => 'Maya Muktavadhoota Dattatreya',
         "geometry" => [
             "location" => [
-                "lat" => 12.283467,
-                "lng" => 76.659047
+                "lat" => 12.369162,
+                "lng" => 79.783092
             ]
         ],
         "zIndex" => 1,
@@ -79,7 +80,7 @@ India
 EOD
 
         ,
-        "links" => [] // {type:"",url:""}
+        "links" => []
     ],
     [
         "name" => 'Datta Yogi Raja',
@@ -128,7 +129,6 @@ EOD
 $ashramsStr = json_encode($ashrams);
 ?>
 <script type="text/javascript">
-    var data = '<?php echo $ashramsStr; ?>';
     // Scope all the functions under datta temples
     var dt = {
         // Api key for google maps api.
@@ -142,14 +142,29 @@ $ashramsStr = json_encode($ashrams);
 
             this.locations = dt.getData();
 
-            var map = new google.maps.Map(document.getElementById('map-canvas'),
+            this.map = new google.maps.Map(document.getElementById('map-canvas'),
                 mapOptions);
 
-            this.setMarkers(map, dt.locations);
+            this.setMarkers();
         },
 
         getData: function () {
-            return $.parseJSON(data.replace(/\n/g, "\\n"));
+            var mapPoints = '<?php echo $ashramsStr; ?>';
+            var locations = $.parseJSON(mapPoints.replace(/\n/g, "\\n"));
+
+            for (var i = 0; i < locations.length; i++) {
+                var data = locations[i];
+
+                // Format data. Remove new lines and replace with break tags
+                if (data.contact) {
+                    data.contact = nl2br(data.contact);
+                }
+
+                if (data.description) {
+                    data.description = nl2br(data.description);
+                }
+            }
+            return locations;
         },
 
         loadScript: function () {
@@ -161,7 +176,7 @@ $ashramsStr = json_encode($ashrams);
             document.body.appendChild(script);
         },
 
-        setMarkers: function (map, locations) {
+        setMarkers: function () {
             // Add markers to the map
 
             // Marker sizes are expressed as a Size of X,Y
@@ -190,38 +205,45 @@ $ashramsStr = json_encode($ashrams);
                 type: 'poly'
             };
 
-            for (var i = 0; i < locations.length; i++) {
-                var location = locations[i];
-                var myLatLng = new google.maps.LatLng(location.geometry.location.lat, location.geometry.location.lng);
+            for (var i = 0; i < dt.locations.length; i++) {
+                var data = dt.locations[i];
+
+                var myLatLng = new google.maps.LatLng(data.geometry.location.lat, data.geometry.location.lng);
                 var marker = new google.maps.Marker({
                     position: myLatLng,
-                    map: map,
+                    map: dt.map,
                     icon: image,
                     shape: shape,
-                    title: location.name,
-                    zIndex: location.zIndex
+                    title: data.name,
+                    zIndex: data.zIndex
                 });
+                marker.pos = i;
 
-                var source = $("#info").html();
-                var template = Handlebars.compile(source);
-                if (location.contact) {
-                    location.contact = nl2br(location.contact);
-                }
-                if (location.description) {
-                    location.description = nl2br(location.description);
-                }
-
-                var content = template(location);
-
-                marker.info = new google.maps.InfoWindow({
-                    content: content,
-                    maxWidth: 600
-                });
-
-                google.maps.event.addListener(marker, 'click', function () {
-                    this.info.open(map, this);
-                });
+                google.maps.event.addListener(marker, 'click', dt.renderInfoWindow);
             }
+        },
+
+        renderInfoWindow: function () {
+            if (this.info) {
+                // Info window already exists. close it before rendering again.
+                this.info.close();
+            }
+
+            // Get data for this marker
+            var data = dt.locations[this.pos];
+
+
+            var source = $("#info").html();
+            var template = Handlebars.compile(source);
+
+
+            var content = template(data);
+
+            this.info = new google.maps.InfoWindow({
+                content: content,
+                maxWidth: 600
+            });
+            this.info.open(dt.map, this);
         }
     };
 
