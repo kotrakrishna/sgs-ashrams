@@ -11,12 +11,6 @@
         padding: 0;
     }
 
-    .gm-style-iw {
-        max-height: 600px !important;
-        overflow-y: scroll !important;
-        white-space: nowrap;
-    }
-
     h3 {
         margin-top: 0;
     }
@@ -85,37 +79,38 @@ EOD
         ],
         "zIndex" => 1,
         "photos" => [],
-        "description" => <<<EOD
-The Ashrama here was establkished in 1981. Datta temple was established in 1988. Satsang & Homa is comnducted every Sunday. Karya Siddhi Hanuman, Shiva Linga, Maha Ganapathy and Navagrahas shrines were added later. "Purna Phala Samarpana" (dry coconut offering) to Karya Siddhi Hanuman is very popular and thousands of devotees come every day.
-In November 2006, A beautiful auditorium, KARYA SIDDHI MANTAPA" was inaugurated. It has state of art sound and light system. A new spacious Kriya Yoga hall is in first floor of the Mantapa.
-Bangalore Ashrama Trust regularly conduct rural Medical camps.
-The Matru Mandali is active and conducts regular meetings for women.
-
-EOD
-        ,
-        "contact" => <<<EOD
-Sri Ganapati Sachchidananda Ashrama
-7th cross, 3rd 'C' main
-Girinagar II Phase, Near State Bank Colony
-Banaglore - 560 085
-Tel 080-2672 2269
-
-Mr. C.S. Narasimhan
-Executive Trustee - Tel No - 9886030134
-
-Email: mail@sgsbangalore.com
-Website - www.sgsbangalore.com
-
-VAGDEVI - a school for communication handicapped is functioning from this Ashrama. Smt.Shantha Radha Krishna, a well qualified speech pathologist is the principal of the school.
-Contact
-Phone - 080-26722830
-email - vagdevitrust@rediffmail.com
-Web - www.vagdevi.org
-
-EOD
-
-        ,
-        "links" => [] // {type:"",url:""}
+//        "description" => <<<EOD
+//The Ashrama here was establkished in 1981. Datta temple was established in 1988. Satsang & Homa is comnducted every Sunday. Karya Siddhi Hanuman, Shiva Linga, Maha Ganapathy and Navagrahas shrines were added later. "Purna Phala Samarpana" (dry coconut offering) to Karya Siddhi Hanuman is very popular and thousands of devotees come every day.
+//In November 2006, A beautiful auditorium, KARYA SIDDHI MANTAPA" was inaugurated. It has state of art sound and light system. A new spacious Kriya Yoga hall is in first floor of the Mantapa.
+//Bangalore Ashrama Trust regularly conduct rural Medical camps.
+//The Matru Mandali is active and conducts regular meetings for women.
+//
+//EOD
+//        ,
+//        "contact" => <<<EOD
+//Sri Ganapati Sachchidananda Ashrama
+//7th cross, 3rd C main
+//Girinagar II Phase, Near State Bank Colony
+//Banaglore - 560 085
+//Tel 080-2672 2269
+//
+//Mr. C.S. Narasimhan
+//Executive Trustee - Tel No - 9886030134
+//
+//Email: mail@sgsbangalore.com
+//Website - www.sgsbangalore.com
+//
+//VAGDEVI - a school for communication handicapped is functioning from this Ashrama. Smt.Shantha Radha Krishna, a well qualified speech pathologist is the principal of the school.
+//Contact
+//Phone - 080-26722830
+//email - vagdevitrust@rediffmail.com
+//Web - www.vagdevi.org
+//
+//EOD
+//
+//        ,
+        "links" => []
+        // {type:"",url:""}
     ]
 ];
 $ashramsStr = json_encode($ashrams);
@@ -197,8 +192,13 @@ $ashramsStr = json_encode($ashrams);
 
                 var source = $("#info").html();
                 var template = Handlebars.compile(source);
-                location.contact = nl2br(location.contact);
-                location.description = nl2br(location.description);
+                if (location.contact) {
+                    location.contact = nl2br(location.contact);
+                }
+                if (location.description) {
+                    location.description = nl2br(location.description);
+                }
+
                 var content = template(location);
 
                 marker.info = new google.maps.InfoWindow({
@@ -225,15 +225,40 @@ $ashramsStr = json_encode($ashrams);
 <script src="/sgs-ashrams/assets/js/handlebars-v1.3.0.js"></script>
 <script id="info" type="text/x-handlebars-template">
 
-    <div class="content">
-        <h3>{{name}}</h3>
+        <div class="content">
+            <h3>{{name}}</h3>
 
-        <div class="bodyContent">
-            <div class="description">{{{description}}}</div>
-            <div>{{{contact}}}</div>
+            <div class="bodyContent">
+                {{#if description}}
+                <div class="description">{{{description}}}</div>
+                {{/if}}
+                {{#if contact}}
+                <div>{{{contact}}}</div>
+                {{/if}}
+            </div>
         </div>
-    </div>
 
+<!--    <div id="content">-->
+<!--        <div id="siteNotice"></div>-->
+<!--        <h1 id="firstHeading" class="firstHeading">Uluru</h1>-->
+<!---->
+<!--        <div id="bodyContent">-->
+<!--            <p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large-->
+<!--                sandstone rock formation in the southern part of the-->
+<!--                Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi)-->
+<!--                south west of the nearest large town, Alice Springs; 450&#160;km-->
+<!--                (280&#160;mi) by road. Kata Tjuta and Uluru are the two major-->
+<!--                features of the Uluru - Kata Tjuta National Park. Uluru is-->
+<!--                sacred to the Pitjantjatjara and Yankunytjatjara, the-->
+<!--                Aboriginal people of the area. It has many springs, waterholes,-->
+<!--                rock caves and ancient paintings. Uluru is listed as a World-->
+<!--                Heritage Site.</p>-->
+<!---->
+<!--            <p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">-->
+<!--                    http://en.wikipedia.org/w/index.php?title=Uluru</a>-->
+<!--                (last visited June 22, 2009).</p>-->
+<!--        </div>-->
+<!--    </div>-->
 </script>
 </head>
 <body>
