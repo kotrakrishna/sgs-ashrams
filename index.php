@@ -11,6 +11,10 @@
         padding: 0;
     }
 
+    div.gm-style-iw {
+        overflow: hidden !important;
+    }
+
     h3 {
         margin-top: 0;
     }
@@ -27,8 +31,8 @@ $ashrams = [
         "geometry" => [
             "location" => [
 
-                "lat" => 12.283467,
-                "lng" => 76.659047
+                "lat" => 12.284215,
+                "lng" => 76.657083
             ]
         ],
         "zIndex" => 1,
@@ -86,8 +90,8 @@ EOD
         "name" => 'Datta Yogi Raja',
         "geometry" => [
             "location" => [
-                "lat" => 12.9387967,
-                "lng" => 77.5440143
+                "lat" => 12.938544,
+                "lng" => 77.543415
             ]
         ],
         "zIndex" => 1,
@@ -137,13 +141,13 @@ $ashramsStr = json_encode($ashrams);
         initialize: function () {
             var mapOptions = {
                 zoom: 8,
-                center: new google.maps.LatLng(12.283479, 76.659035)
+                center: new google.maps.LatLng(12.283479, 76.659035),
+                maxZoom: 19
             };
 
             this.locations = dt.getData();
 
-            this.map = new google.maps.Map(document.getElementById('map-canvas'),
-                mapOptions);
+            this.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
             this.setMarkers();
         },
