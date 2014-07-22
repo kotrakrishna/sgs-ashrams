@@ -27,7 +27,7 @@
 </style><?php
 $ashrams = [
     [
-        "name" => 'Kalagni Samana Dattatreya',
+        "name" => 'Kalagni Shamana Dattatreya',
         "geometry" => [
             "location" => [
 
@@ -64,7 +64,7 @@ EOD
         ]
     ],
     [
-        "name" => 'Maya Muktavadhoota Dattatreya',
+        "name" => 'Maya Mukta Avadhoota Dattatreya',
         "geometry" => [
             "location" => [
                 "lat" => 12.369162,
@@ -87,7 +87,7 @@ EOD
         "links" => []
     ],
     [
-        "name" => 'Datta Yogi Raja',
+        "name" => 'Datta Yogiraaja',
         "geometry" => [
             "location" => [
                 "lat" => 12.938544,
@@ -96,38 +96,720 @@ EOD
         ],
         "zIndex" => 1,
         "photos" => [],
-//        "description" => <<<EOD
-//The Ashrama here was establkished in 1981. Datta temple was established in 1988. Satsang & Homa is comnducted every Sunday. Karya Siddhi Hanuman, Shiva Linga, Maha Ganapathy and Navagrahas shrines were added later. "Purna Phala Samarpana" (dry coconut offering) to Karya Siddhi Hanuman is very popular and thousands of devotees come every day.
-//In November 2006, A beautiful auditorium, KARYA SIDDHI MANTAPA" was inaugurated. It has state of art sound and light system. A new spacious Kriya Yoga hall is in first floor of the Mantapa.
-//Bangalore Ashrama Trust regularly conduct rural Medical camps.
-//The Matru Mandali is active and conducts regular meetings for women.
-//
-//EOD
-//        ,
-//        "contact" => <<<EOD
-//Sri Ganapati Sachchidananda Ashrama
-//7th cross, 3rd C main
-//Girinagar II Phase, Near State Bank Colony
-//Banaglore - 560 085
-//Tel 080-2672 2269
-//
-//Mr. C.S. Narasimhan
-//Executive Trustee - Tel No - 9886030134
-//
-//Email: mail@sgsbangalore.com
-//Website - www.sgsbangalore.com
-//
-//VAGDEVI - a school for communication handicapped is functioning from this Ashrama. Smt.Shantha Radha Krishna, a well qualified speech pathologist is the principal of the school.
-//Contact
-//Phone - 080-26722830
-//email - vagdevitrust@rediffmail.com
-//Web - www.vagdevi.org
-//
-//EOD
-//
-//        ,
+        "description" => <<<EOD
+The Ashrama here was establkished in 1981. Datta temple was established in 1988. Satsang & Homa is comnducted every Sunday. Karya Siddhi Hanuman, Shiva Linga, Maha Ganapathy and Navagrahas shrines were added later. \"Purna Phala Samarpana\" (dry coconut offering) to Karya Siddhi Hanuman is very popular and thousands of devotees come every day.
+In November 2006, A beautiful auditorium, \"KARYA SIDDHI MANTAPA\" was inaugurated. It has state of art sound and light system. A new spacious Kriya Yoga hall is in first floor of the Mantapa.
+Bangalore Ashrama Trust regularly conduct rural Medical camps.
+The Matru Mandali is active and conducts regular meetings for women.
+
+EOD
+        ,
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Ashrama
+7th cross, 3rd C main
+Girinagar II Phase, Near State Bank Colony
+Banaglore - 560 085
+
+Tel: 080-2672 2269
+Email: mail@sgsbangalore.com
+
+Mr. C.S. Narasimhan
+Executive Trustee - Tel No - 9886030134
+
+EOD
+
+        ,
+        "links" => [
+            "website" => [
+                "www.sgsbangalore.com",
+                "www.vagdevi.org"
+            ]
+        ]
+    ],
+    [
+        "name" => 'Aadi Guru Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 12.9790615,
+                "lng" => 80.2315467
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => <<<EOD
+The Ashrama complex in Madras is very active with various spiritual and social activities. The Dattatreya temple here has the Adi Guru Namaka Dattatreya idol installed by Pujya Swamiji in 1988.
+Satsangs & Ganapati Homas & mediacal camps are held every Sunday. All the important festivals are celebrated. A big auditorium \"Sachchidananda Hall\" serves the community needs. Temples of Navagraha, Raja Rajeshwari and the first \"KARYA SIDDHI HANUMAN\" temple was installed by Sri Swamiji. A spacious new medical services building offers free medical camps to rural public. Dr.Shiva heads the medical division. Sri Ramani, Sankaran, Chandran and Jayaraman are part of the committee that manages the Ashrama. Madras city has been one of the earliest to have Gnana Bodha Sabha (branch of Mysore ashrama established by Sri Swamiji). From 1970, Ashrama functioned in Mylapore area. Illustrious personalities like violin Maestro T.N.Krishnan, Jurist Late V.G.Ramachandran and othes have meen members of Ashrama.
+
+EOD
+        ,
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Ashram
+Sachchidananda Nagar,
+Taramani Link Road
+Velachery
+Madras INDIA
+600-042
+Tel 044-22434596
+
+EOD
+        ,
         "links" => []
-        // {type:"",url:""}
+    ],
+    [
+        "name" => 'Siddha Raja Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 10.1274196,
+                "lng" => 76.3470593
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => <<<EOD
+One of the most beautiful of Ashrams. Situated on the banks of the Periyar river, the ashrama has a Kerala style Datta temple, Karya Siddhi Hanuman temple and Ganesha temple. Prayer hall and Guru Nilaya too are ornately built. The Hanuman temple attracts large criwds on week end for Purna Phala Samarpana (offering of dry coconut).
+Ashrama conducts weekly free Ayurveda and Allopathy medical camps in the hospital building.
+
+EOD
+        ,
+        "contact" => <<<EOD
+Sri Ganapathy Sachchidananada Ashram (Hanuman temple)
+Swargam Road,
+Desom, Alwaye - 683 103
+
+Ashrama Tel - 0484 - 2606121
+Mr. Kannan - 098950 35505
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Gam Datta Nath Kshetram',
+        "geometry" => [
+            "location" => [
+                "lat" => 28.756372,
+                "lng" => 77.160799
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => <<<EOD
+Delhi Gnana Bodha Sabha was established in early 70s and the present Ashrama was started in late 80s. The first Dattatreya Temple in Nava Natha scheme was installed by Sri Swamiji. Ashrama regularly offers free community services like clothes to the poor, food, schooling etc
+
+EOD
+        ,
+        "contact" => <<<EOD
+Sri Dattatreya Gnana Bodha Satsang Sabha Charitable Trust
+Gam Datta Nath Mandir
+Saroop Nagar
+G.T.Karnal Road
+Delhi
+Tel - 011 - 2781 2413
+
+Executive Trustee - Dr.Mrs.Shyamlha Pappu - tel 098110-85170
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Leela Vishwambara Datta',
+        "geometry" => [
+            "location" => [
+                "lat" => 21.159735,
+                "lng" => 72.770521
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => <<<EOD
+Surat Ashrama has unique architecture. The red stone temple is situated on the first floor with meditation hall in the ground floor. There are temples of Shiva, Navagraha, Devi, Ganesha, Skanda
+
+EOD
+        ,
+        "contact" => <<<EOD
+Ashram
+Leela vishawambara Datta Temple (Lal Mandir)
+Magdulla Village
+Dumas Road
+Surat
+
+Contact
+Mr.Vasudev Goplani
+(Executive Trustee)
+Tel: 09825113911
+
+Niranjan Parekh
+Tel: 094261-01608
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Bheemavaram',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.544832,
+                "lng" => 81.517720
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+V.V.S.S. Sharma
+Executive Trustee
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Gnaana Sagara Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 14.675290,
+                "lng" => 77.600660
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+N. Thirupala Reddy
+Executive Trustee
+Akuthotapalli (PO)
+Anantapur (Mandal)
+Anantapur District
+Andra Pradesh
+
+Sri Ganapati Sachchidananda Gnana Bodha Sabha Trust
+Sabha Trust
+Door No: 11-148, Hospital Road
+Opp: Z.P. Office
+
+Trustee
+K. Siddaiah (Advocate)
+D. No. 7/7, Prakash Road,
+Anantapur -515 001
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Vishwambara Avadhoota Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.579274,
+                "lng" => 81.369120
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Immedi Setti Venkateswarulu
+Main Road, Akividu - 534 235
+Tel: 2050 pp
+
+Sri I. Subba Rao
+Main Road, Akividu -534 235
+Tel: 2380
+
+Sri Sri Sri Ganapati Sachchidananda Gnana Bodha Satsanga Sabha
+Akividu -534 235
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Kadapa',
+        "geometry" => [
+            "location" => [
+                "lat" => 14.452919,
+                "lng" => 78.818920
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Trust
+1/93 Railway Station Road,
+Cuddapah 516 004
+Andhra Pradesh
+Tel: 24487
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Dharmavaram',
+        "geometry" => [
+            "location" => [
+                "lat" => 14.422614,
+                "lng" => 77.713994
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Sri Sri Ganapati Sachchidananda Gnana Bodha Sabha
+Kothapeta, Near Telephone Exchange
+Dharmavaram 515 672
+Ananthapur District
+Andhra Pradesh
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Eluru',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.722908,
+                "lng" => 81.083354
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Gnana Bodha Satsanga Sabha
+Kannayya Park, Main Bazar,
+Eluru - 534 001
+
+Sri Kaki Vankata Swamy Babu,
+Secretary
+Tel: 20506(Office), 20693(Res)
+
+Sri Venugopal Lunani,
+Vice President
+Tel: 30703(Office), 21849(Res)
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Gannavaram',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.530386,
+                "lng" => 80.784461
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Gudavalli Radha Subba Rao
+Executive Trustee
+Budhavaram Post
+Gonnavaram Mandalam
+Krishna District
+Andhra Pradesh
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'DAM Dattanatha Kshetram',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.254591,
+                "lng" => 80.335914
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Ganapathy Sachchidananda Datta Gnana Bodha Sabha
+\"DAM\" Dattanatha Kshetram,
+Sri Ganapathy Sachchidananda Ashrama
+Chodavaram village (10th km stone from Guntur), NH 5,
+Guntur - 522009
+Andhra Pradesh
+
+Tel- 0863 - 2512370
+
+Contact - Mr.P.Gopi Krishna, Executive Trustee
+Phone - 093465-14546
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Datta Avadhoota',
+        "geometry" => [
+            "location" => [
+                "lat" => 17.5942869,
+                "lng" => 78.4102606
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => <<<EOD
+Main Ashrama in Hyderabad
+Sprawling Ashrama campus about 25 Kms from Hyderabad situated near Airforce Acedamy on Dindigul Road. The Ashrama has a huge prayer hall, Temples of Dattatreya (Datta Yogi Raja Avatara), Maha Ganapathy, Raja Rajeshwari, Marakatha Hanuman (one of its kind in the world). Every Sunday Satsang and Homa are held in teh Ashrama from 10 AM onwards. The medical hospital in the Ashrama is doing yeoman sevice to the villages around. Several special medical camps are conducted regularly by qualified doctors.
+
+Ammavodi, a home for aged destitute women , is situated next to the Ashrama.
+Tel: 08418-255685
+
+EOD
+        ,
+        "contact" => "",
+        "links" => []
+    ],
+    [
+        "name" => 'SGS Information Center',
+        "geometry" => [
+            "location" => [
+                "lat" => 17.444751,
+                "lng" => 78.465531
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Swamiji Information Center
+1 - 11/251 Lahoti Building
+Begumpet, Hyderabad - 500 016
+Andhra Pradesh
+
+Tel- 040-27765047
+Email - sgsinfocentre@gmail.com or hyderabad@sgsashrama.org
+
+Contact -
+Mr.Narayana Rao - mobile-9849025470
+Mr.Srinivas - mobile - 98490-30060
+
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Patancheru',
+        "geometry" => [
+            "location" => [
+                "lat" => 17.513807,
+                "lng" => 78.288975
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Jayalakshmi Mata Yoga Center
+L.I.G , B.H.E.L
+Ramachandrapuram
+Hyderabad-500032
+Phone: (040) 65178145
+Contact : Narra Nageswara Rao Ph:(040) 23025818
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Samskaara Heena Shivaroopa Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 14.5795958,
+                "lng" => 77.5900272
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Gnana Bodha Sabha Trust
+Raptadu Mandal, Jaya Lakshmi Puram,
+Anantapur District, Andhra Pradesh
+Tel:- 08554-56231
+
+Sri C. Lakshmi Reddy
+Executive Trustee
+Tel : 08554-22785
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Rajamundry',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.990020,
+                "lng" => 81.776149
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri K. Satyanarayana Choudary
+Sri Sri Sri Ganapati Sachchidananda Datta Gnana Bodha Sabha
+Rajahmundry
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Yogiraaja Vallabha Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 14.757829,
+                "lng" => 78.552760
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri M. Ramanjaneyulu
+Vice President
+Sri Ganapati Sachchidananda Trust
+Sri Styanarayana Swamy Devastanam
+Society Colony, Proddatur 516 361
+Cuddapah Dist
+Andhra Pradesh Tel - 08564-52970
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Datta Rameshwaram',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.246914,
+                "lng" => 81.231986
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Datta Rameswaram
+Tallapalum,
+Manginapudi
+
+Sri. Ramesh
+Machilipatnam
+Tel: 098481-53721
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Atri Varada Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.1802492,
+                "lng" => 81.1363124
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Dattashramam,
+Buttaipet, Machilipatnam 521 001
+Tel: 08672-222421
+
+C. Ramachandra Rao
+Tel - 08672-23940
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Nellore',
+        "geometry" => [
+            "location" => [
+                "lat" => 14.430390,
+                "lng" => 79.964440
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => <<<EOD
+Nellore Ashrama has shrines of Krishna, Ashta Lakshmi, Datta and Hanuman temples
+
+EOD
+        ,
+        "contact" => <<<EOD
+Smt. P. Prameelamma
+President
+Sri Jayalakshmi Matha Mathru Mandali
+Sri Krishna Yoga Mandiram
+Sujathamma Colony
+Durga Mitta, Nellore 524 004
+Andhra Pradesh
+Tel - 0861-2323696
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Deva Deva Avatara Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.770346,
+                "lng" => 80.847337
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => <<<EOD
+Sri Swamiji installed DEVA DEVA AVATARA Dattatreya and Anagha Devi temple and Ananthesvara Shiva temple in this Ashrama. Situated in the lush green mango gardens, the Ashrama serves the local community
+
+EOD
+        ,
+        "contact" => <<<EOD
+Smt. Rama Devi
+President,
+Sri Ganapathy Sachchidananda Ashrama
+Nuzuvid
+Krishna Dist
+Andhra Pradesh
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Shyama Kamala Lochana Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.4929343,
+                "lng" => 80.6681803
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => <<<EOD
+Vijayawada devotees form one of the oldest Datta groups in India. Since 1968, Sri Swamiji has been visiting Vijayawada annually. The present Ashrama has seen gradual development from 1970s. Sri Swamiji installed Kshipra Ganapathy temple in 1980 and Datta Anagha temple, Navagraha temples later. A spacious prayer hall and a beautiful stone carved temple for Raja Rajeswari were installed in 2003. The idol of Raja Rajeshwari was made of precious and rare Marakata stone (green stone) Sri Swamiji performed eloborate rituals to inaugurate the temple. (link)
+
+Ashrama has a full service free medical unit manned by qualified doctors.
+
+EOD
+        ,
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Gnana Bodha Sabha
+Sri Datta Nagar, Patamata
+Vijayawada 520 010
+Tel: 0866-555541
+Contact person: Mr. K. Prabhakar Iyer
+
+Sri Kolli Gopala Krishnaiah (Executive Trustee)
+
+Dr. (Mrs) T. Sarojini
+Secretary
+Matha Jayalakshmi Sabha
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Badampudi',
+        "geometry" => [
+            "location" => [
+                "lat" => 16.834633,
+                "lng" => 81.478728
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => <<<EOD
+Sri Subrahmanya Datta Gnana Bodha Sabha Badampudi Trust
+Badampudi
+Ungutur Mandal
+West Godavari Dist.
+Andhra Pradesh - 534 411
+Tel: 08818-211422
+
+Sri. K. Srinivasa Rao, Executive Trustee
+Tel: 94407 10092
+Tel: 08818-288133
+
+EOD
+        ,
+        "links" => []
+    ],
+    [
+        "name" => 'Cherala',
+        "geometry" => [
+            "location" => [
+                "lat" => 15.826474,
+                "lng" => 80.342777
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => "",
+        "links" => []
+    ],
+    [
+        "name" => 'Warangal',
+        "geometry" => [
+            "location" => [
+                "lat" => 18.005063,
+                "lng" => 79.590626
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => "",
+        "links" => []
+    ],
+    [
+        "name" => 'Anagha Datta Kshetram',
+        "geometry" => [
+            "location" => [
+                "lat" => 17.125676,
+                "lng" => 82.258745
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => "Pithapuram, Andhra Pradesh",
+        "links" => []
+    ],
+    [
+        "name" => 'Kadiri',
+        "geometry" => [
+            "location" => [
+                "lat" => 14.124918,
+                "lng" => 78.154311
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "",
+        "contact" => "",
+        "links" => []
     ]
 ];
 $ashramsStr = json_encode($ashrams);
@@ -140,8 +822,8 @@ $ashramsStr = json_encode($ashrams);
 
         initialize: function () {
             var mapOptions = {
-                zoom: 8,
-                center: new google.maps.LatLng(12.283479, 76.659035),
+                zoom: 5,
+                center: new google.maps.LatLng(22.479972, 77.909883),
                 maxZoom: 19
             };
 
@@ -276,195 +958,9 @@ $ashramsStr = json_encode($ashrams);
         </div>
     </div>
 
-    <!--    <div id="content">-->
-    <!--        <div id="siteNotice"></div>-->
-    <!--        <h1 id="firstHeading" class="firstHeading">Uluru</h1>-->
-    <!---->
-    <!--        <div id="bodyContent">-->
-    <!--            <p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large-->
-    <!--                sandstone rock formation in the southern part of the-->
-    <!--                Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi)-->
-    <!--                south west of the nearest large town, Alice Springs; 450&#160;km-->
-    <!--                (280&#160;mi) by road. Kata Tjuta and Uluru are the two major-->
-    <!--                features of the Uluru - Kata Tjuta National Park. Uluru is-->
-    <!--                sacred to the Pitjantjatjara and Yankunytjatjara, the-->
-    <!--                Aboriginal people of the area. It has many springs, waterholes,-->
-    <!--                rock caves and ancient paintings. Uluru is listed as a World-->
-    <!--                Heritage Site.</p>-->
-    <!---->
-    <!--            <p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">-->
-    <!--                    http://en.wikipedia.org/w/index.php?title=Uluru</a>-->
-    <!--                (last visited June 22, 2009).</p>-->
-    <!--        </div>-->
-    <!--    </div>-->
 </script>
 </head>
 <body>
 <div id="map-canvas"></div>
 </body>
 </html>
-
-
-Baroda
-
-Sri Datta Satsang Trust
-A/54, Vrindavan Park Society
-VIP Road
-Karelibaug
-Vadodara or Baroda - 390 018
-India.
-Contact person: Mrs K. Rama Devi (Managing Executive Trustee)
-Tel: Mobile: 98983 91342
-Tel: off: 0265-2464 883
-Email: sgs_vadodara@rediffmail.com
-The center in Baroda consists of a small group of Datta devotes interestes in the spread of Swamiji's mission. Regular Satsangs are conducted.
-
-
-Madras
-12.9790615,80.2315467
-
-
-Pondicherry
-
-
-A beautiful Ashrama stands on the banks of Shankarabharani river. Sri Ganapathy Sachchidananda Yoga Nada Bhavanam" is a large and beautiful auditorium for meditation and is dedicated to Pujya Sri Swamiji. There are no temples in the Ashrama. Only meditation and weekly satsangs are held. Guru Nilaya, Havan Shala are there.
-
-Contact -
-Rama Rao - 0413- 2203 506
-Ashrama number - 0413-654 7898
-
-Alwaye/Cochin - Kerala
-10.1274196,76.3470593,18z
-
-Delhi
-
-Saroop Nagar, Bhalswa
-12.292482, 77.436141
-
-Surat
-21.159735, 72.770521
-
-Kamareddy
-
-Sri Ganapati Sachchidananda Ashramam
-Rameshwarpally Road
-Opp: TTD Kalyanamantapam
-Kamareddy - 503 111
-Andhra Pradesh
-
-Executive Trustee
-Dr. B Ishwar Das, MD
-Near Railway Bridge
-Kamareddy - 503 111
-Tel: 3050
-
-
-Bhimavaram
-16.544832, 81.517720
-
-Akividu
-16.579274, 81.369120
-
-Cuddapah
-Kadapa, Andhra Pradesh, India
-14.452919, 78.818920
-
-
-Dharmavaram
-14.422614, 77.713994
-
-Eluru
-16.722908, 81.083354
-
-Gannavaram
-16.530386, 80.784461
-
-Gandi Gunta
-
-Sri N.V. Subba Rao
-Executive Trustee
-Sri Ganapati Sachchidananda Gnana Bodha Sabha
-Gandi Gunta
-Vuyyaru Mandalam
-Krishna District
-Andhra Pradesh
-
-
-Srikakulam
-
-B.K. Surya Rao
-Executive Trustee
-Sri Ganapati Sachchidananda Gnana Bodha Sabha
-A6, Industrial Estate
-Navbharat Junction
-Srikakulam - 532 004
-Andhra Pradesh
-
-Proddatur
-14.757829, 78.552760
-
-Maginapudi
-16.246914, 81.231986
-
-Machilipatnam
-16.1802492,81.1363124,20
-
-Nellore
-14.430390, 79.964440
-
-Nuzuvidu
-16.770346, 80.847337
-
-Vijayawada
-16.4929343,80.6681803,21
-
-Badampudi
-16.834633, 81.478728
-
-Cherala
-15.826474, 80.342777
-
-Warangal
-18.005063, 79.590626
-
-Kaikalur (Lokha Moodi Guruvu)
-16.562416, 81.232685
-
-Jaya Lakshmi Puram (Bommeparthy)
-14.5795958,77.5900272
-
-Anantapur, Andhra Pradesh, India
-14.675290, 77.600660
-
-Rajahmundry
-16.990020, 81.776149
-
-Guntur
-16.254591, 80.335914
-
-Hyderabad
-
-Sri Ganapati Sachchidananda Swamiji Information Center
-17.444751, 78.465531
-
-Main Ashrama in Hyderabad
-17.5942869,78.4102606,
-
-Patancheru
-17.513807, 78.288975
-
-ADK
-Pithapuram, Andhra Pradesh
-17.125676, 82.258745
-
-Kadiri
-Sri Ganapati Sachchidaananda Ashramam
-14.124918, 78.154311
-
-Dilsukhnagar
-BDL
-Kurnool
-RushiKesh
-Dattagiri
-Ganagapur
-
