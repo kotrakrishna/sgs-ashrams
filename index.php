@@ -1,146 +1,240 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Datta temple locations</title>
-    <style>
-        html, body, #map-canvas {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<title>Datta temple locations</title>
+<style>
+    html, body, #map-canvas {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
-        .gm-style-iw {
-            height: 100% !important;
-            overflow: hidden !important;
-        }
+    .gm-style-iw {
+        max-height: 600px !important;
+        overflow-y: scroll !important;
+        white-space: nowrap;
+    }
 
-        h3 {
-            margin-top: 0;
-        }
-    </style>
-    <script>
-        // Scope all the functions under datta temples
-        var dt = {
-            // Api key for google maps api.
-            apiKey: 'AIzaSyARyBk64-eFDPKjFl1XbaLEsw7aCyWQcb4',
+    h3 {
+        margin-top: 0;
+    }
+
+    .description {
+        margin-bottom: 10px;
+    }
 
 
-            //  Data for the markers consisting of a name, a LatLng and a zIndex for
-            //  the order in which these markers should display on top of each
-            //  other.
-            locations: [
-                {
+</style><?php
+$ashrams = [
+    [
+        "name" => 'Kalagni Samana Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 12.369162,
+                "lng" => 79.783092
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => '',
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Ashrama,
+Datta Nagar, Mysore - 570 025. INDIA.
 
-                    name: 'Kalagni Samana Datta',
-                    geometry: {
-                        location: {
-                            lat: 12.283467,
-                            lng: 76.659047
-                        }
-                    },
-                    zIndex: 1,
-                    photos: [],
-                    description: "Avadhoota Datta Peetham",
-                    links: [] // {type:"",url:""}
+Tel: +91 (0821) 2486 486
+Fax: +91 (0821) 2487 487
 
-                }
-            ],
+email : mail@dattapeetham.com
+EOD
 
-            initialize: function () {
-                var mapOptions = {
-                    zoom: 8,
-                    center: new google.maps.LatLng(12.283479, 76.659035)
-                };
+        ,
+        "links" => [] // {type:"",url:""}
+    ],
+    [
+        "name" => 'Maya Muktavadhoota Dattatreya',
+        "geometry" => [
+            "location" => [
+                "lat" => 12.283467,
+                "lng" => 76.659047
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => "This Ashrama complex situated Madras - Pondicherry in the pictursqe setting in rural Tamil nadu is 90 minute drive from Madras. The Ashrama has Dattatreya, Ganapati & Skanda temples. The ashrama caters to the villagers from a dozen villages nearby, Doctors from Madras conduct periodical medical and health checkup camps. A large statue of Dakshinamurthy was installed recently. There is a 32 Ganapathy statued Meditation Hall in the Ashrama.",
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Datta Trust
+20, GST Road
+Acharapakkam - 603 301
+Chengelpet DT Tamil Nadu
+India
 
-                var map = new google.maps.Map(document.getElementById('map-canvas'),
-                        mapOptions);
+EOD
 
-                this.setMarkers(map, dt.locations);
-            },
+        ,
+        "links" => [] // {type:"",url:""}
+    ],
+    [
+        "name" => 'Datta Yogi Raja',
+        "geometry" => [
+            "location" => [
+                "lat" => 12.9387967,
+                "lng" => 77.5440143
+            ]
+        ],
+        "zIndex" => 1,
+        "photos" => [],
+        "description" => <<<EOD
+The Ashrama here was establkished in 1981. Datta temple was established in 1988. Satsang & Homa is comnducted every Sunday. Karya Siddhi Hanuman, Shiva Linga, Maha Ganapathy and Navagrahas shrines were added later. "Purna Phala Samarpana" (dry coconut offering) to Karya Siddhi Hanuman is very popular and thousands of devotees come every day.
+In November 2006, A beautiful auditorium, KARYA SIDDHI MANTAPA" was inaugurated. It has state of art sound and light system. A new spacious Kriya Yoga hall is in first floor of the Mantapa.
+Bangalore Ashrama Trust regularly conduct rural Medical camps.
+The Matru Mandali is active and conducts regular meetings for women.
 
-            loadScript: function () {
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-                        '&callback=dt.initialize' +
-                        '&key=' + dt.apiKey;
-                document.body.appendChild(script);
-            },
+EOD
+        ,
+        "contact" => <<<EOD
+Sri Ganapati Sachchidananda Ashrama
+7th cross, 3rd 'C' main
+Girinagar II Phase, Near State Bank Colony
+Banaglore - 560 085
+Tel 080-2672 2269
 
-            setMarkers: function (map, locations) {
-                // Add markers to the map
+Mr. C.S. Narasimhan
+Executive Trustee - Tel No - 9886030134
 
-                // Marker sizes are expressed as a Size of X,Y
-                // where the origin of the image (0,0) is located
-                // in the top left of the image.
+Email: mail@sgsbangalore.com
+Website - www.sgsbangalore.com
 
-                // Origins, anchor positions and coordinates of the marker
-                // increase in the X direction to the right and in
-                // the Y direction down.
-                var image = {
-                    url: 'assets/images/temple.png',
-                    // This marker is 32 pixels wide by 37 pixels tall.
-                    size: new google.maps.Size(32, 36),
-                    // The origin for this image is 0,0.
-                    origin: new google.maps.Point(0, 0),
-                    // The anchor for this image is the indicator below the image
-                    anchor: new google.maps.Point(14.5, 34)
-                };
-                // Shapes define the clickable region of the icon.
-                // The type defines an HTML &lt;area&gt; element 'poly' which
-                // traces out a polygon as a series of X,Y points. The final
-                // coordinate closes the poly by connecting to the first
-                // coordinate.
-                var shape = {
-                    coords: [0, 0, 0, 37, 37, 37, 37 , 0],
-                    type: 'poly'
-                };
-                for (var i = 0; i < locations.length; i++) {
-                    var location = locations[i];
-                    var myLatLng = new google.maps.LatLng(location.geometry.location.lat, location.geometry.location.lng);
-                    var marker = new google.maps.Marker({
-                        position: myLatLng,
-                        map: map,
-                        icon: image,
-                        shape: shape,
-                        title: location.name,
-                        zIndex: location.zIndex
-                    });
+VAGDEVI - a school for communication handicapped is functioning from this Ashrama. Smt.Shantha Radha Krishna, a well qualified speech pathologist is the principal of the school.
+Contact
+Phone - 080-26722830
+email - vagdevitrust@rediffmail.com
+Web - www.vagdevi.org
 
-                    var source = $("#info").html();
-                    var template = Handlebars.compile(source);
-                    var content = template(location);
+EOD
 
-                    var infowindow = new google.maps.InfoWindow({
-                        content: content,
-                        maxWidth: 600
-                    });
+        ,
+        "links" => [] // {type:"",url:""}
+    ]
+];
+$ashramsStr = json_encode($ashrams);
+?>
+<script type="text/javascript">
+    var data = '<?php echo $ashramsStr; ?>';
+    // Scope all the functions under datta temples
+    var dt = {
+        // Api key for google maps api.
+        apiKey: 'AIzaSyARyBk64-eFDPKjFl1XbaLEsw7aCyWQcb4',
 
-                    google.maps.event.addListener(marker, 'click', function () {
-                        infowindow.open(map, marker);
-                    });
-                }
+        initialize: function () {
+            var mapOptions = {
+                zoom: 8,
+                center: new google.maps.LatLng(12.283479, 76.659035)
+            };
+
+            this.locations = dt.getData();
+
+            var map = new google.maps.Map(document.getElementById('map-canvas'),
+                mapOptions);
+
+            this.setMarkers(map, dt.locations);
+        },
+
+        getData: function () {
+            return $.parseJSON(data.replace(/\n/g, "\\n"));
+        },
+
+        loadScript: function () {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+                '&callback=dt.initialize' +
+                '&key=' + dt.apiKey;
+            document.body.appendChild(script);
+        },
+
+        setMarkers: function (map, locations) {
+            // Add markers to the map
+
+            // Marker sizes are expressed as a Size of X,Y
+            // where the origin of the image (0,0) is located
+            // in the top left of the image.
+
+            // Origins, anchor positions and coordinates of the marker
+            // increase in the X direction to the right and in
+            // the Y direction down.
+            var image = {
+                url: 'assets/images/temple.png',
+                // This marker is 32 pixels wide by 37 pixels tall.
+                size: new google.maps.Size(32, 36),
+                // The origin for this image is 0,0.
+                origin: new google.maps.Point(0, 0),
+                // The anchor for this image is the indicator below the image
+                anchor: new google.maps.Point(14.5, 34)
+            };
+            // Shapes define the clickable region of the icon.
+            // The type defines an HTML &lt;area&gt; element 'poly' which
+            // traces out a polygon as a series of X,Y points. The final
+            // coordinate closes the poly by connecting to the first
+            // coordinate.
+            var shape = {
+                coords: [0, 0, 0, 37, 37, 37, 37 , 0],
+                type: 'poly'
+            };
+
+            for (var i = 0; i < locations.length; i++) {
+                var location = locations[i];
+                var myLatLng = new google.maps.LatLng(location.geometry.location.lat, location.geometry.location.lng);
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    icon: image,
+                    shape: shape,
+                    title: location.name,
+                    zIndex: location.zIndex
+                });
+
+                var source = $("#info").html();
+                var template = Handlebars.compile(source);
+                location.contact = nl2br(location.contact);
+                location.description = nl2br(location.description);
+                var content = template(location);
+
+                marker.info = new google.maps.InfoWindow({
+                    content: content,
+                    maxWidth: 600
+                });
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    this.info.open(map, this);
+                });
             }
-        };
+        }
+    };
 
-        window.onload = dt.loadScript;
+    window.onload = dt.loadScript;
 
-    </script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/sgs-ashrams/assets/js/handlebars-v1.3.0.js"></script>
-    <script id="info" type="text/x-handlebars-template">
+    function nl2br(str, is_xhtml) {
+        var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+        return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+    }
 
-        <div class="content">
-            <h3>{{name}}</h3>
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/sgs-ashrams/assets/js/handlebars-v1.3.0.js"></script>
+<script id="info" type="text/x-handlebars-template">
 
-            <div class="bodyContent">
-                <p>{{description}}</p>
-            </div>
+    <div class="content">
+        <h3>{{name}}</h3>
+
+        <div class="bodyContent">
+            <div class="description">{{{description}}}</div>
+            <div>{{{contact}}}</div>
         </div>
+    </div>
 
-    </script>
+</script>
 </head>
 <body>
 <div id="map-canvas"></div>
@@ -162,14 +256,9 @@ Tel: off: 0265-2464 883
 Email: sgs_vadodara@rediffmail.com
 The center in Baroda consists of a small group of Datta devotes interestes in the spread of Swamiji's mission. Regular Satsangs are conducted.
 
-Acharapakkam
-12.369162, 79.783092
 
 Madras
 12.9790615,80.2315467
-
-Bangalore
-@12.9387967,77.5440143,17z
 
 
 Pondicherry
