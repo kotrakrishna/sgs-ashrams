@@ -822,8 +822,8 @@ $ashramsStr = json_encode($ashrams);
 
         initialize: function () {
             var mapOptions = {
-                zoom: 5,
-                center: new google.maps.LatLng(22.479972, 77.909883),
+                zoom: 7,
+                center: new google.maps.LatLng(16.007100, 77.342385),
                 maxZoom: 19
             };
 
