@@ -817,6 +817,7 @@ $ashramsStr = json_encode($ashrams);
 <script type="text/javascript">
     // Scope all the functions under datta temples
     var dt = {
+        info: null,
         // Api key for google maps api.
         apiKey: 'AIzaSyARyBk64-eFDPKjFl1XbaLEsw7aCyWQcb4',
 
@@ -827,6 +828,7 @@ $ashramsStr = json_encode($ashrams);
                 maxZoom: 19
             };
 
+            dt.info = new google.maps.InfoWindow();
             this.locations = dt.getData();
 
             this.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -910,10 +912,15 @@ $ashramsStr = json_encode($ashrams);
         },
 
         renderInfoWindow: function () {
-            if (this.info) {
-                // Info window already exists. close it before rendering again.
-                this.info.close();
+
+            // Close the existing Info window
+            if(dt.info){
+                dt.info.close();
             }
+
+            // Zoom the location
+            dt.map.setZoom(8);
+            dt.map.setCenter(dt.map.position);
 
             // Get data for this marker
             var data = dt.locations[this.pos];
@@ -925,11 +932,11 @@ $ashramsStr = json_encode($ashrams);
 
             var content = template(data);
 
-            this.info = new google.maps.InfoWindow({
+            dt.info = new google.maps.InfoWindow({
                 content: content,
                 maxWidth: 600
             });
-            this.info.open(dt.map, this);
+            dt.info.open(dt.map, this);
         }
     };
 
