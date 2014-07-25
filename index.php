@@ -932,12 +932,20 @@ $ashramsStr = json_encode($ashrams);
             },
 
             renderInfoWindow: function () {
-
                 // Close the existing Info window
                 if (dt.info) {
-                    dt.info.close();
+                    var anchor = dt.info.getAnchor();
+                    if (anchor) {
+                        if (anchor.pos == this.pos) {
+                            // infowindow already opened for this marker. Just close it
+                            dt.info.close();
+                            return;
+                        } else {
+                            dt.info.close();
+                        }
+
+                    }
                 }
-                console.log(dt.info);
 
                 // Zoom the location
                 dt.map.setZoom(8);
@@ -958,6 +966,7 @@ $ashramsStr = json_encode($ashrams);
                     maxWidth: 600
                 });
                 dt.info.open(dt.map, this);
+                dt.info.pos = this.pos;
             }
         }
         ;
