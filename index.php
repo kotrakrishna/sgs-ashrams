@@ -922,6 +922,12 @@ $ashramsStr = json_encode($ashrams);
                     marker.pos = i;
 
                     google.maps.event.addListener(marker, 'click', dt.renderInfoWindow);
+
+                    google.maps.event.addListener(dt.map, 'click', function () {
+                        if (dt.info) {
+                            dt.info.close();
+                        }
+                    });
                 }
             },
 
@@ -931,6 +937,7 @@ $ashramsStr = json_encode($ashrams);
                 if (dt.info) {
                     dt.info.close();
                 }
+                console.log(dt.info);
 
                 // Zoom the location
                 dt.map.setZoom(8);
