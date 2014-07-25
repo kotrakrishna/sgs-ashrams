@@ -817,128 +817,143 @@ $ashramsStr = json_encode($ashrams);
 <script type="text/javascript">
     // Scope all the functions under datta temples
     var dt = {
-        info: null,
-        // Api key for google maps api.
-        apiKey: 'AIzaSyARyBk64-eFDPKjFl1XbaLEsw7aCyWQcb4',
+            info: null,
+            // Api key for google maps api.
+            apiKey: 'AIzaSyARyBk64-eFDPKjFl1XbaLEsw7aCyWQcb4',
 
-        initialize: function () {
-            var mapOptions = {
-                zoom: 7,
-                center: new google.maps.LatLng(16.007100, 77.342385),
-                maxZoom: 19
-            };
+            initialize: function () {
+                var mapOptions = {
+                    zoom: 7,
+                    center: new google.maps.LatLng(16.007100, 77.342385),
+                    maxZoom: 19,
+                    panControl: true,
+                    zoomControl: true,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {
+                        position: google.maps.ControlPosition.LEFT_TOP,
+                        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+                    },
+                    scaleControl: true,
+                    streetViewControl: false,
+                    overviewMapControl: true,
+                    overviewMapControlOptions: {
+                        position: google.maps.ControlPosition.LEFT_BOTTOM
+                    },
+                    disableDefaultUI: false
+                };
 
-            dt.info = new google.maps.InfoWindow();
-            this.locations = dt.getData();
+                dt.info = new google.maps.InfoWindow();
+                this.locations = dt.getData();
 
-            this.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+                this.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-            this.setMarkers();
-        },
+                this.setMarkers();
+            },
 
-        getData: function () {
-            var mapPoints = '<?php echo $ashramsStr; ?>';
-            var locations = $.parseJSON(mapPoints.replace(/\n/g, "\\n"));
+            getData: function () {
+                var mapPoints = '<?php echo $ashramsStr; ?>';
+                var locations = $.parseJSON(mapPoints.replace(/\n/g, "\\n"));
 
-            for (var i = 0; i < locations.length; i++) {
-                var data = locations[i];
+                for (var i = 0; i < locations.length; i++) {
+                    var data = locations[i];
 
-                // Format data. Remove new lines and replace with break tags
-                if (data.contact) {
-                    data.contact = nl2br(data.contact);
+                    // Format data. Remove new lines and replace with break tags
+                    if (data.contact) {
+                        data.contact = nl2br(data.contact);
+                    }
+
+                    if (data.description) {
+                        data.description = nl2br(data.description);
+                    }
+                }
+                return locations;
+            },
+
+            loadScript: function () {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+                    '&callback=dt.initialize' +
+                    '&key=' + dt.apiKey;
+                document.body.appendChild(script);
+            },
+
+            setMarkers: function () {
+                // Add markers to the map
+
+                // Marker sizes are expressed as a Size of X,Y
+                // where the origin of the image (0,0) is located
+                // in the top left of the image.
+
+                // Origins, anchor positions and coordinates of the marker
+                // increase in the X direction to the right and in
+                // the Y direction down.
+                var image = {
+                    url: 'assets/images/temple.png',
+                    // This marker is 32 pixels wide by 37 pixels tall.
+                    size: new google.maps.Size(32, 36),
+                    // The origin for this image is 0,0.
+                    origin: new google.maps.Point(0, 0),
+                    // The anchor for this image is the indicator below the image
+                    anchor: new google.maps.Point(14.5, 34)
+                };
+                // Shapes define the clickable region of the icon.
+                // The type defines an HTML &lt;area&gt; element 'poly' which
+                // traces out a polygon as a series of X,Y points. The final
+                // coordinate closes the poly by connecting to the first
+                // coordinate.
+                var shape = {
+                    coords: [0, 0, 0, 37, 37, 37, 37 , 0],
+                    type: 'poly'
+                };
+
+                for (var i = 0; i < dt.locations.length; i++) {
+                    var data = dt.locations[i];
+
+                    var myLatLng = new google.maps.LatLng(data.geometry.location.lat, data.geometry.location.lng);
+                    var marker = new google.maps.Marker({
+                        position: myLatLng,
+                        map: dt.map,
+                        icon: image,
+                        shape: shape,
+                        title: data.name,
+                        zIndex: data.zIndex
+                    });
+                    marker.pos = i;
+
+                    google.maps.event.addListener(marker, 'click', dt.renderInfoWindow);
+                }
+            },
+
+            renderInfoWindow: function () {
+
+                // Close the existing Info window
+                if (dt.info) {
+                    dt.info.close();
                 }
 
-                if (data.description) {
-                    data.description = nl2br(data.description);
-                }
-            }
-            return locations;
-        },
+                // Zoom the location
+                dt.map.setZoom(8);
+                dt.map.setCenter(dt.map.position);
 
-        loadScript: function () {
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-                '&callback=dt.initialize' +
-                '&key=' + dt.apiKey;
-            document.body.appendChild(script);
-        },
+                // Get data for this marker
+                var data = dt.locations[this.pos];
 
-        setMarkers: function () {
-            // Add markers to the map
 
-            // Marker sizes are expressed as a Size of X,Y
-            // where the origin of the image (0,0) is located
-            // in the top left of the image.
+                var source = $("#info").html();
+                var template = Handlebars.compile(source);
 
-            // Origins, anchor positions and coordinates of the marker
-            // increase in the X direction to the right and in
-            // the Y direction down.
-            var image = {
-                url: 'assets/images/temple.png',
-                // This marker is 32 pixels wide by 37 pixels tall.
-                size: new google.maps.Size(32, 36),
-                // The origin for this image is 0,0.
-                origin: new google.maps.Point(0, 0),
-                // The anchor for this image is the indicator below the image
-                anchor: new google.maps.Point(14.5, 34)
-            };
-            // Shapes define the clickable region of the icon.
-            // The type defines an HTML &lt;area&gt; element 'poly' which
-            // traces out a polygon as a series of X,Y points. The final
-            // coordinate closes the poly by connecting to the first
-            // coordinate.
-            var shape = {
-                coords: [0, 0, 0, 37, 37, 37, 37 , 0],
-                type: 'poly'
-            };
 
-            for (var i = 0; i < dt.locations.length; i++) {
-                var data = dt.locations[i];
+                var content = template(data);
 
-                var myLatLng = new google.maps.LatLng(data.geometry.location.lat, data.geometry.location.lng);
-                var marker = new google.maps.Marker({
-                    position: myLatLng,
-                    map: dt.map,
-                    icon: image,
-                    shape: shape,
-                    title: data.name,
-                    zIndex: data.zIndex
+                dt.info = new google.maps.InfoWindow({
+                    content: content,
+                    maxWidth: 600
                 });
-                marker.pos = i;
-
-                google.maps.event.addListener(marker, 'click', dt.renderInfoWindow);
+                dt.info.open(dt.map, this);
             }
-        },
-
-        renderInfoWindow: function () {
-
-            // Close the existing Info window
-            if(dt.info){
-                dt.info.close();
-            }
-
-            // Zoom the location
-            dt.map.setZoom(8);
-            dt.map.setCenter(dt.map.position);
-
-            // Get data for this marker
-            var data = dt.locations[this.pos];
-
-
-            var source = $("#info").html();
-            var template = Handlebars.compile(source);
-
-
-            var content = template(data);
-
-            dt.info = new google.maps.InfoWindow({
-                content: content,
-                maxWidth: 600
-            });
-            dt.info.open(dt.map, this);
         }
-    };
+        ;
 
     window.onload = dt.loadScript;
 
