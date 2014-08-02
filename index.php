@@ -51,17 +51,8 @@ email : mail@dattapeetham.com
 EOD
 
         ,
-        "links" => [
-            "website" => [
-                "http://www.dattapeetham.com",
-                "http://www.sgsbirds.com",
-                "http://www.puttugam.com"
-            ],
-            "facebook" => [
-                "https://www.facebook.com/dattapeetham",
-                "https://www.facebook.com/puttugam"
-            ]
-        ]
+        "website" => "http://www.dattapeetham.com,http://www.sgsbirds.com,http://www.puttugam.com",
+        "facebook" => "https://www.facebook.com/dattapeetham,https://www.facebook.com/puttugam"
     ],
     [
         "name" => 'Maya Mukta Avadhoota Dattatreya',
@@ -112,9 +103,6 @@ Banaglore - 560 085
 
 Tel: 080-2672 2269
 Email: mail@sgsbangalore.com
-
-Mr. C.S. Narasimhan
-Executive Trustee - Tel No - 9886030134
 
 EOD
 
@@ -177,7 +165,6 @@ Swargam Road,
 Desom, Alwaye - 683 103
 
 Ashrama Tel - 0484 - 2606121
-Mr. Kannan - 098950 35505
 
 EOD
         ,
@@ -206,8 +193,6 @@ G.T.Karnal Road
 Delhi
 Tel - 011 - 2781 2413
 
-Executive Trustee - Dr.Mrs.Shyamlha Pappu - tel 098110-85170
-
 EOD
         ,
         "links" => []
@@ -233,14 +218,6 @@ Leela vishawambara Datta Temple (Lal Mandir)
 Magdulla Village
 Dumas Road
 Surat
-
-Contact
-Mr.Vasudev Goplani
-(Executive Trustee)
-Tel: 09825113911
-
-Niranjan Parekh
-Tel: 094261-01608
 
 EOD
         ,
@@ -277,22 +254,10 @@ EOD
         "photos" => [],
         "description" => "",
         "contact" => <<<EOD
-N. Thirupala Reddy
-Executive Trustee
-Akuthotapalli (PO)
-Anantapur (Mandal)
-Anantapur District
-Andra Pradesh
-
 Sri Ganapati Sachchidananda Gnana Bodha Sabha Trust
 Sabha Trust
 Door No: 11-148, Hospital Road
 Opp: Z.P. Office
-
-Trustee
-K. Siddaiah (Advocate)
-D. No. 7/7, Prakash Road,
-Anantapur -515 001
 
 EOD
         ,
@@ -310,14 +275,6 @@ EOD
         "photos" => [],
         "description" => "",
         "contact" => <<<EOD
-Sri Immedi Setti Venkateswarulu
-Main Road, Akividu - 534 235
-Tel: 2050 pp
-
-Sri I. Subba Rao
-Main Road, Akividu -534 235
-Tel: 2380
-
 Sri Sri Sri Ganapati Sachchidananda Gnana Bodha Satsanga Sabha
 Akividu -534 235
 
@@ -385,14 +342,6 @@ Sri Ganapati Sachchidananda Gnana Bodha Satsanga Sabha
 Kannayya Park, Main Bazar,
 Eluru - 534 001
 
-Sri Kaki Vankata Swamy Babu,
-Secretary
-Tel: 20506(Office), 20693(Res)
-
-Sri Venugopal Lunani,
-Vice President
-Tel: 30703(Office), 21849(Res)
-
 EOD
         ,
         "links" => []
@@ -408,16 +357,7 @@ EOD
         "zIndex" => 1,
         "photos" => [],
         "description" => "",
-        "contact" => <<<EOD
-Sri Gudavalli Radha Subba Rao
-Executive Trustee
-Budhavaram Post
-Gonnavaram Mandalam
-Krishna District
-Andhra Pradesh
-
-EOD
-        ,
+        "contact" => "",
         "links" => []
     ],
     [
@@ -440,9 +380,6 @@ Guntur - 522009
 Andhra Pradesh
 
 Tel- 0863 - 2512370
-
-Contact - Mr.P.Gopi Krishna, Executive Trustee
-Phone - 093465-14546
 
 EOD
         ,
@@ -490,11 +427,6 @@ Andhra Pradesh
 Tel- 040-27765047
 Email - sgsinfocentre@gmail.com or hyderabad@sgsashrama.org
 
-Contact -
-Mr.Narayana Rao - mobile-9849025470
-Mr.Srinivas - mobile - 98490-30060
-
-
 EOD
         ,
         "links" => []
@@ -516,7 +448,6 @@ L.I.G , B.H.E.L
 Ramachandrapuram
 Hyderabad-500032
 Phone: (040) 65178145
-Contact : Narra Nageswara Rao Ph:(040) 23025818
 
 EOD
         ,
@@ -539,10 +470,6 @@ Raptadu Mandal, Jaya Lakshmi Puram,
 Anantapur District, Andhra Pradesh
 Tel:- 08554-56231
 
-Sri C. Lakshmi Reddy
-Executive Trustee
-Tel : 08554-22785
-
 EOD
         ,
         "links" => []
@@ -559,7 +486,6 @@ EOD
         "photos" => [],
         "description" => "",
         "contact" => <<<EOD
-Sri K. Satyanarayana Choudary
 Sri Sri Sri Ganapati Sachchidananda Datta Gnana Bodha Sabha
 Rajahmundry
 
@@ -579,8 +505,6 @@ EOD
         "photos" => [],
         "description" => "",
         "contact" => <<<EOD
-Sri M. Ramanjaneyulu
-Vice President
 Sri Ganapati Sachchidananda Trust
 Sri Styanarayana Swamy Devastanam
 Society Colony, Proddatur 516 361
@@ -607,10 +531,6 @@ Datta Rameswaram
 Tallapalum,
 Manginapudi
 
-Sri. Ramesh
-Machilipatnam
-Tel: 098481-53721
-
 EOD
         ,
         "links" => []
@@ -631,9 +551,6 @@ Sri Ganapati Sachchidananda Dattashramam,
 Buttaipet, Machilipatnam 521 001
 Tel: 08672-222421
 
-C. Ramachandra Rao
-Tel - 08672-23940
-
 EOD
         ,
         "links" => []
@@ -653,18 +570,7 @@ Nellore Ashrama has shrines of Krishna, Ashta Lakshmi, Datta and Hanuman temples
 
 EOD
         ,
-        "contact" => <<<EOD
-Smt. P. Prameelamma
-President
-Sri Jayalakshmi Matha Mathru Mandali
-Sri Krishna Yoga Mandiram
-Sujathamma Colony
-Durga Mitta, Nellore 524 004
-Andhra Pradesh
-Tel - 0861-2323696
-
-EOD
-        ,
+        "contact" => "",
         "links" => []
     ],
     [
@@ -683,8 +589,6 @@ Sri Swamiji installed DEVA DEVA AVATARA Dattatreya and Anagha Devi temple and An
 EOD
         ,
         "contact" => <<<EOD
-Smt. Rama Devi
-President,
 Sri Ganapathy Sachchidananda Ashrama
 Nuzuvid
 Krishna Dist
@@ -716,13 +620,6 @@ Sri Ganapati Sachchidananda Gnana Bodha Sabha
 Sri Datta Nagar, Patamata
 Vijayawada 520 010
 Tel: 0866-555541
-Contact person: Mr. K. Prabhakar Iyer
-
-Sri Kolli Gopala Krishnaiah (Executive Trustee)
-
-Dr. (Mrs) T. Sarojini
-Secretary
-Matha Jayalakshmi Sabha
 
 EOD
         ,
@@ -746,10 +643,6 @@ Ungutur Mandal
 West Godavari Dist.
 Andhra Pradesh - 534 411
 Tel: 08818-211422
-
-Sri. K. Srinivasa Rao, Executive Trustee
-Tel: 94407 10092
-Tel: 08818-288133
 
 EOD
         ,
